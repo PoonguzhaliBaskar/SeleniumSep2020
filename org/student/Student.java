@@ -1,9 +1,8 @@
 package org.student;
 
-import org.college.College;
 import org.department.Department;
 
-public class Student {
+public class Student extends Department {
 
 	public void studentName() {
 		System.out.println("Name");
@@ -22,12 +21,12 @@ public class Student {
            stud.studentDept();
            stud.studentID();
            stud.studentName();
-        College clg=new College();
-          clg.collegeCode();
-          clg.collegeName();
-          clg.collegeRank();
-        Department dept=new Department();
-        dept.deptName();
+           stud.deptName();
+           stud.collegeCode();
+           stud.collegeName();
+           stud.collegeRank();
+  
+      
 	}
 
 }
