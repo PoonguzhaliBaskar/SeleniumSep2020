@@ -9,11 +9,13 @@ public class Frames {
 
 	public static void main(String[] args) {
 		
-		  WebDriverManager.chromedriver().setup(); ChromeDriver driver=new
-		  ChromeDriver(); driver.manage().window().maximize();
+		  WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver(); 
+		driver.manage().window().maximize();
 		
 		  driver.get("http://leafground.com/pages/frame.html");
-		  driver.switchTo().frame(0); driver.findElementById("Click").click();
+		  driver.switchTo().frame(0); 
+		driver.findElementById("Click").click();
 		
 		  
 		
