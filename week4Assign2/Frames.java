@@ -22,8 +22,7 @@ public class Frames {
 		  driver.get("http://leafground.com/pages/frame.html");
 		  driver.switchTo().frame(1); 
 		  driver.switchTo().frame("frame2");
-		  driver.findElementByXPath("//button[text()='Click Me'][@id='Click1']").click(
-		  );
+		  driver.findElementByXPath("//button[text()='Click Me'][@id='Click1']").click();
 		 
 	    
 	    //total no of iframes 
