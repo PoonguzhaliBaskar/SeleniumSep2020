@@ -9,20 +9,29 @@ public class Frames {
 
 	public static void main(String[] args) {
 		
-		  WebDriverManager.chromedriver().setup();
-		ChromeDriver driver=new ChromeDriver(); 
-		driver.manage().window().maximize();
-		
+		   WebDriverManager.chromedriver().setup();
+		  ChromeDriver driver=new ChromeDriver();
+		  driver.manage().window().maximize();
+		//1st part
 		  driver.get("http://leafground.com/pages/frame.html");
 		  driver.switchTo().frame(0); 
-		driver.findElementById("Click").click();
-		
+		  WebElement frame1 = driver.findElementById("Click");
+		frame1.click();
+		String text = frame1.getText();
+		System.out.println(text);
+		driver.switchTo().defaultContent();
 		  
-		
-		  driver.get("http://leafground.com/pages/frame.html");
+		//2nd part
+		 
 		  driver.switchTo().frame(1); 
 		  driver.switchTo().frame("frame2");
-		  driver.findElementByXPath("//button[text()='Click Me'][@id='Click1']").click();
+		  WebElement ele1 = driver.findElementByXPath("//button[text()='Click Me'][@id='Click1']");
+		 ele1.click();
+		 String text2 = ele1.getText();
+		 System.out.println(text2);
+		 driver.switchTo().defaultContent();
+		 
+	    
 		 
 	    
 	    //total no of iframes 
