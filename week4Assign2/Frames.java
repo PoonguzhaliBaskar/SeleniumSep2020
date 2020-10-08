@@ -30,21 +30,21 @@ public class Frames {
 		 String text2 = ele1.getText();
 		 System.out.println(text2);
 		 driver.switchTo().defaultContent();
-		 
-	    
-		 
-	    
-	    //total no of iframes 
-	    driver.get("http://leafground.com/pages/frame.html");
-	    int size = driver.findElements(By.tagName("iframe")).size();
-	    int count=size;
-	    System.out.println("Iframe count is:"+count);
-	    for(int i=0; i<size; i++){
-		driver.switchTo().frame(i);
-		count=count+driver.findElementsByTagName("iframe").size();
-		driver.switchTo().defaultContent();
 			    
-	}
-System.out.println(count);
+	    //total no of iframes 
+		  int size = driver.findElements(By.tagName("iframe")).size();
+	          System.out.println(size);
+		  int count=0;
+		  for(int i=0; i<size; i++){
+		  driver.switchTo().frame(i);
+                  count=count+driver.findElementsByTagName("iframe").size();
+		  driver.switchTo().defaultContent();
+				    
+		}
+			System.out.println(count);
+			int Total=size+count;
+			System.out.println("Total  iframe count is:"+Total);
+		  
+		 	  driver.close();
 }
 }
